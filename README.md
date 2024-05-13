@@ -1,7 +1,7 @@
 # topicos-especiais-sd
 ## Correção Ortográfica Automática de Palavras Baseada em Dicionário
 
-Este projeto utiliza várias técnicas e algoritmos para implementar a correção ortográfica automática de palavras, assegurando que as entradas de texto estejam livres de erros antes de serem processadas ou armazenadas.
+Foi feito um estudo dos possíveis algoritmos que poderiam ser implementados para este projeto. Por conseguinte, foi escolhido o melhor algoritmo para implementação.
 
 ### Distância de Levenshtein
 
@@ -13,7 +13,6 @@ A estrutura de dados **BK-Tree** é utilizada para melhorar a eficiência da bus
 
 ### FuzzyWuzzy
 
-O algoritmo **FuzzyWuzzy** é empregado para comparar strings de maneira mais flexível, considerando variações e pequenos erros nas entradas de texto.
 
 ### Fórmula de Cálculo da Similaridade
 
@@ -22,4 +21,4 @@ A similaridade entre duas strings é calculada usando a seguinte fórmula:
 ```plaintext
 Similaridade = (1 - (Distância de Levenshtein / Comprimento máximo das duas strings)) * 100
 ```
-
+Esta fórmula fornece um valor percentual que reflete quão semelhantes são as duas strings, onde 100% representa uma correspondência perfeita e 0% indica nenhuma similaridade. ajeita pra mim que fique bonito
