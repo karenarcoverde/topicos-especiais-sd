@@ -16,6 +16,5 @@ A similaridade é calculada usando a seguinte fórmula:
 ```plaintext
 Similaridade = (1 - (Distância de Levenshtein / Comprimento máximo das duas strings)) × 100
 ```
-
-
+Esta fórmula fornece um valor percentual que reflete quão semelhantes são as duas strings, onde 100% representa uma correspondência perfeita e 0% indica nenhuma similaridade.
 
