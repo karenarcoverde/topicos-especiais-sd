@@ -5,7 +5,7 @@ Foi feito um estudo dos possíveis algoritmos que poderiam ser implementados par
 
 ### Distância de Levenshtein
 
-A **distância de Levenshtein** é uma métrica fundamental neste projeto, utilizada para calcular a similaridade entre strings. Ela mede o número mínimo de edições necessárias para transformar uma string em outra. Estas edições incluem inserções, deleções e substituições de caracteres.
+A **distância de Levenshtein** é uma métrica fundamental neste projeto. Ela mede o número mínimo de edições necessárias para transformar uma string em outra. Estas edições incluem inserções, deleções e substituições de caracteres.
 
 ### BK-Tree
 
