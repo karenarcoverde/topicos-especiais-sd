@@ -1,20 +1,25 @@
 # topicos-especiais-sd
-Correção ortográfica automática de palavras baseada em dicionário
+## Correção Ortográfica Automática de Palavras Baseada em Dicionário
 
-levschtein
-**distância de Levenshtein** para calcular a similaridade entre strings. A distância de Levenshtein mede o número mínimo de edições necessárias para transformar uma string em outra, o que inclui inserções, deleções e substituições de caracteres.
+Este projeto utiliza várias técnicas e algoritmos para implementar a correção ortográfica automática de palavras, assegurando que as entradas de texto estejam livres de erros antes de serem processadas ou armazenadas.
 
+### Distância de Levenshtein
 
-bk-tree
+A **distância de Levenshtein** é uma métrica fundamental neste projeto, utilizada para calcular a similaridade entre strings. Ela mede o número mínimo de edições necessárias para transformar uma string em outra. Estas edições incluem inserções, deleções e substituições de caracteres.
 
-fuzzy wuzzy
+### BK-Tree
+
+A estrutura de dados **BK-Tree** é utilizada para melhorar a eficiência da busca por palavras próximas no dicionário, permitindo correções rápidas e eficazes mesmo em grandes volumes de dados.
+
+### FuzzyWuzzy
+
+O algoritmo **FuzzyWuzzy** é empregado para comparar strings de maneira mais flexível, considerando variações e pequenos erros nas entradas de texto.
 
 ### Fórmula de Cálculo da Similaridade
 
-A similaridade é calculada usando a seguinte fórmula:
+A similaridade entre duas strings é calculada usando a seguinte fórmula:
 
 ```plaintext
-Similaridade = (1 - (Distância de Levenshtein / Comprimento máximo das duas strings)) × 100
+Similaridade = (1 - (Distância de Levenshtein / Comprimento máximo das duas strings)) * 100
 ```
-Esta fórmula fornece um valor percentual que reflete quão semelhantes são as duas strings, onde 100% representa uma correspondência perfeita e 0% indica nenhuma similaridade.
 
