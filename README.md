@@ -9,7 +9,7 @@ A **distância de Levenshtein** é uma métrica fundamental neste projeto. É po
 
 ### BK-Tree
 
-A estrutura de dados **BK-Tree** é utilizada para melhorar a eficiência da busca por palavras próximas no dicionário, permitindo correções rápidas e eficazes mesmo em grandes volumes de dados.
+A BK-Tree consiste em botar as palavras em uma árvore com pesos (distância de Levenshtein) e pecorrer a árvore pegando todas as distâncias menor ou igual a distância limite estipulada. 
 
 ### FuzzyWuzzy
 
