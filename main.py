@@ -1,9 +1,20 @@
 import queue
- 
+
+
 class Node:
     def __init__(self, x=None):
         self.word = x
         self.next = [0] * 20
+
+
+class Bktree:
+    def __init__(self, x=None):
+       self.root = Node ()
+
+    def add_node (node):
+       pass
+     
+ 
  
 def add(root, curr):
     if not root.word:
