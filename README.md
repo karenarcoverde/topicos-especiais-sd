@@ -9,7 +9,7 @@ A **distância de Levenshtein** é uma métrica fundamental neste projeto. É po
 
 ### BK-Tree
 
-A BK-Tree consiste em botar as palavras em uma árvore com pesos (distância de Levenshtein) e pecorrer a árvore pegando todas as distâncias menor ou igual a distância limite estipulada. 
+A BK-Tree consiste em botar as palavras em uma árvore com pesos (distância de Levenshtein) e pecorrer a árvore pegando todas as distâncias menores ou iguais a distância limite estipulada. 
 
 ### FuzzyWuzzy
 
