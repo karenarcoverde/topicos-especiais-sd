@@ -24,6 +24,6 @@ Similaridade = (1 - (Distância de Levenshtein / Comprimento máximo das duas st
 Esta fórmula fornece um valor percentual que reflete quão semelhantes são as duas strings, onde 100% representa uma correspondência perfeita e 0% indica nenhuma similaridade.
 
 ### Referências
-http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees \\
-https://www.youtube.com/watch?v=oIsPB2pqq_8 \\
+http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees \
+https://www.youtube.com/watch?v=oIsPB2pqq_8 \
 https://medium.com/datenworks/fuzzy-search-buscando-texto-por-aproxima%C3%A7%C3%A3o-6c7214e0ea01
