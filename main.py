@@ -51,6 +51,22 @@ def edit_distance(a, b):
                 dp[i][j] = dp[i - 1][j - 1]
     return dp[m][n]
 
+def get_similar_words(root, s):
+    ret = []
+    if not root or not root.word:
+        return ret
+ 
+    dist = edit_distance(root.word, s)
+    if dist <= TOL:
+        ret.append(root.word)
+ 
+    start = dist - TOL if dist - TOL > 0 else 1
+    while start <= dist + TOL:
+        tmp = get_similar_words(tree[root.next[start]], s)
+        ret += tmp
+        start += 1
+    return ret
+
 MAXN = 100
 TOL = 2
 LEN = 10
@@ -66,3 +82,17 @@ if __name__ == "__main__":
     for i in range(sz):
         tmp = Node(dictionary[i])
         add(RT, tmp)
+
+    w1 = "ops"
+    match1 = get_similar_words(RT, w1)
+    print("similar words in dictionary for", w1, ": ")
+    for word in match1:
+        print(word, end=" ")
+    print()
+ 
+    w2 = "helt"
+    match2 = get_similar_words(RT, w2)
+    print("similar words in dictionary for", w2, ": ")
+    for word in match2:
+        print(word, end=" ")
+    print()
