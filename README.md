@@ -13,6 +13,8 @@ A BK-Tree consiste em botar as palavras em uma árvore com pesos (distância de 
 
 A matriz dp[m][n] representa a distância total (Levenshtein) entre duas strings(a e b). A matriz dp tem dimensões (m+1)x(n+1), sendo m o comprimento da string a e n o comprimento da string b. Cada célula dp[i][j] armazena a distância de edição mínima entre as substrings a[0:i] e b[0:j]. A matriz é inicializada com dp[i][0] = i e dp[0][j] = j, indicando as transformações para strings vazias. O preechimento da matriz começa no dp[1][1] até dp[m][n], para cada célula dp[i][j], os caracteres da string a[i-1] e b[j-1] são comparados. Para o caso de serem iguais, dp[i-1][j-1] é transferido diretamente para dp[i][j], o que significa que não precisa ter nenhuma edição. Se forem diferentes, a célula é preenchida com o mínimo entre as possíveis operações(inserção, deleção e substituição).
 
+Depois para buscar palavras semelhantes, é verificado a distância de edição entre o nó root e a palavra, caso ela seja menor que a variável "TOL" (tolerância), a palavra do root é adicionada a lista de resultados. Após essa verificação, é analisada os nós filhos de root cujas distâncias estão dentro do intervalo [distância - TOL, distância + TOL], caso esteja, é adicionado a lista de resultados.
+
 
 ### FuzzyWuzzy
 
