@@ -15,6 +15,8 @@ A matriz dp[m][n] representa a distância total (Levenshtein) entre duas strings
 
 Depois para buscar palavras semelhantes, é verificado a distância de edição entre o nó root e a palavra, caso ela seja menor que a variável "TOL" (tolerância), a palavra do root é adicionada a lista de resultados. Após essa verificação, é analisada os nós filhos de root investigando quais palavras tem as distâncias dentro do intervalo [distância - TOL, distância + TOL] para adicionar na lista de resultados.
 
+
+
 ### FuzzyWuzzy
 
 
