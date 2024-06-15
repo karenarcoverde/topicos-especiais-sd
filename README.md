@@ -11,6 +11,9 @@ A **distância de Levenshtein** é uma métrica fundamental neste projeto. É po
 
 A BK-Tree consiste em botar as palavras em uma árvore com pesos (distância de Levenshtein) e pecorrer a árvore pegando todas as distâncias menores ou iguais a distância limite estipulada. 
 
+A matriz dp[m][n] representa a distância total (Levenshtein) entre duas strings(a e b). A matriz dp tem dimensões (m+1)x(n+1), sendo m o comprimento da string a e n o comprimento da string b. Cada célula dp[i][j] armazena a distância de edição mínima entre as substrings a[0:i] e b[0:j]. A matriz é inicializada com dp[i][0] = i e dp[0][j] = j, indicando as transformações para strings vazias. O preechimento da matriz começa no dp[1][1] até dp[m][n], para cada célula dp[i][j], os caracteres da string a[i-1] e b[j-1] são comparados. Para o caso de serem iguais, dp[i-1][j-1] é transferido diretamente para dp[i][j], o que significa que não precisa ter nenhuma edição, deleção e substitução.
+
+
 ### FuzzyWuzzy
 
 
