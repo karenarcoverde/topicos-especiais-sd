@@ -34,5 +34,20 @@ class TestBKTree(unittest.TestCase):
         print("Similar words for 'xyz':", no_similar)
         self.assertEqual(len(no_similar), 0)
 
+    def test_get_similar_words_helt(self):
+        # Testa a função get_similar_words para a palavra 'helt'
+        similar = self.bktree.get_similar_words("helt")
+        print("Similar words for 'helt':", similar)
+        self.assertTrue("hell" in similar)
+        self.assertTrue("felt" in similar)
+        self.assertTrue("halt" in similar)
+
+    def test_get_similar_words_ops(self):
+        # Testa a função get_similar_words para a palavra 'ops'
+        similar = self.bktree.get_similar_words("ops")
+        print("Similar words for 'ops':", similar)
+        self.assertTrue("oops" in similar)
+        self.assertTrue("pop" in similar)
+
 if __name__ == '__main__':
     unittest.main()
