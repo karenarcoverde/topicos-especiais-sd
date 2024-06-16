@@ -16,11 +16,14 @@ class TestBKTree(unittest.TestCase):
     def test_add_word(self):
         # Verifica se palavras adicionais são inseridas corretamente
         self.bktree.add_word("hello")
-        self.assertIn("hello", self.bktree.get_similar_words("hello"))
+        result = self.bktree.get_similar_words("hello")
+        print("Similar words for 'hello':", result)
+        self.assertIn("hello", result)
 
     def test_get_similar_words_within_tolerance(self):
         # Testa a função get_similar_words para verificar se retorna palavras dentro da tolerância especificada
         similar = self.bktree.get_similar_words("help")
+        print("Similar words for 'help':", similar)
         self.assertTrue("hell" in similar)
         self.assertTrue("help" in similar)
         self.assertTrue("felt" in similar)  # Assume TOL >= 1
@@ -28,6 +31,7 @@ class TestBKTree(unittest.TestCase):
     def test_get_similar_words_no_match(self):
         # Garante que palavras fora da tolerância não sejam retornadas
         no_similar = self.bktree.get_similar_words("xyz")
+        print("Similar words for 'xyz':", no_similar)
         self.assertEqual(len(no_similar), 0)
 
 if __name__ == '__main__':
