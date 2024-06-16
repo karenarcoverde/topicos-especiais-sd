@@ -1,5 +1,5 @@
 import unittest
-from bk_tree_modification import BKTree
+from bk_tree import BKTree
 
 class TestBKTree(unittest.TestCase):
     def setUp(self):
@@ -11,7 +11,7 @@ class TestBKTree(unittest.TestCase):
         # Testa se a distância de edição é calculada corretamente
         self.assertEqual(BKTree.edit_distance("hell", "hello"), 1)
         self.assertEqual(BKTree.edit_distance("hell", "help"), 1)
-        self.assertEqual(BKTree.edit_distance("oops", "pop"), 3)
+        self.assertEqual(BKTree.edit_distance("oops", "pop"), 2)
 
     def test_add_word(self):
         # Verifica se palavras adicionais são inseridas corretamente
