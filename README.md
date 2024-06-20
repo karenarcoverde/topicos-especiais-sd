@@ -52,6 +52,11 @@ Esta fórmula fornece um valor percentual que reflete quão semelhantes são as 
 
 
 ### Instalação
+Para instalar o módulo `bk-tree-modification`, execute o seguinte comando no terminal do Windows:
+
+```bash
+pip install bk-tree-modification
+```
 
 ### Exemplo 
 
