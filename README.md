@@ -85,6 +85,34 @@ Ran 6 tests in 0.004s
 OK
 ```
 
+## Explicação do código de teste
+
+### setUp
+Inicializa uma árvore BK com uma lista de palavras.
+
+### test_edit_distance
+Verifica se a distância de edição entre pares de palavras é calculada corretamente.
+
+### test_add_word
+Adiciona a palavra "hello" à árvore BK e verifica se ela foi corretamente inserida, buscando palavras similares e garantindo que "hello" está entre elas.
+
+### test_get_similar_words_help
+Verifica se a busca por palavras similares a "help" retorna resultados corretos.
+
+### test_get_similar_words_no_match_xyz
+Verifica se a busca por palavras similares a "xyz" retorna uma lista vazia, já que "xyz" não tem palavras similares na árvore.
+
+### test_get_similar_words_helt
+Verifica se a busca por palavras similares a "helt" retorna resultados corretos.
+
+### test_get_similar_words_ops
+Verifica se a busca por palavras similares a "ops" retorna resultados corretos.
+
+## Resultado dos Testes
+
+Os resultados são mostrados em uma lista de tuplas que corresponde à palavra similar seguida pela distância entre ela e a palavra buscada.
+
+
 ### Referências
 http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees \
 https://www.youtube.com/watch?v=oIsPB2pqq_8 \
