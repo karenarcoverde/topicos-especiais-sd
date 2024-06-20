@@ -65,6 +65,14 @@ from bk_tree import BKTree
 
 ### Exemplo 
 
+Para testar o `bk_tree`, basta rodar o código `test_bktree.py` que está na pasta tests com o seguinte comando:
+
+```bash
+python test_bktree.py
+```
+
+
+
 (ordenacao do resultado, distancia e ordenacao) 
 
 
