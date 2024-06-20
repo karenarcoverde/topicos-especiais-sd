@@ -65,7 +65,7 @@ from bk_tree import BKTree
 
 ### Exemplo 
 
-Para testar a biblioteca `bk_tree`, basta rodar o código `test_bktree.py` que está na pasta tests com o seguinte comando:
+Para testar a biblioteca `bk_tree`, basta rodar o código `test_bktree.py` que está na pasta tests com os seguintes comandos:
 ```bash
 cd tests
 ```
