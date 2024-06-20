@@ -70,7 +70,18 @@ Para testar a biblioteca `bk_tree`, basta rodar o código `test_bktree.py` que e
 ```bash
 python test_bktree.py
 ```
+```bash
+Similar words for 'hello': [('hello', 0), ('hell', 1), ('help', 2), ('shell', 2), ('fell', 2)]
+..Similar words for 'help': [('help', 0), ('hell', 1), ('shell', 2), ('fell', 2), ('felt', 2), ('halt', 2)]
+.Similar words for 'helt': [('hell', 1), ('help', 1), ('felt', 1), ('halt', 1), ('shell', 2), ('fell', 2)]
+.Similar words for 'xyz': []
+.Similar words for 'ops': [('oops', 1), ('pop', 2)]
+.
+----------------------------------------------------------------------
+Ran 6 tests in 0.004s
 
+OK
+```
 
 
 (ordenacao do resultado, distancia e ordenacao) 
