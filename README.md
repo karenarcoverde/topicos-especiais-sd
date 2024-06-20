@@ -7,27 +7,7 @@ Foi feito um estudo dos possíveis algoritmos que poderiam ser implementados par
 
 A **distância de Levenshtein** é a parte principal desse projeto, pois todos os algoritmos usados derivam-se dele. É possível perceber que ela foi utilizada em quase todos os algoritmos pesquisados. Ela mede o número mínimo de edições necessárias para transformar uma string em outra. Estas edições incluem inserções, deleções e substituições de caracteres.
 
-The Levenshtein distance between two strings \(a, b\) (of length \(|a|\) and \(|b|\) respectively) is given by \( \text{lev}(a, b) \) where
 
-\[ 
-\text{lev}(a, b) = 
-\begin{cases} 
-|a| & \text{if } |b| = 0, \\
-|b| & \text{if } |a| = 0, \\
-\text{lev}(\text{tail}(a), \text{tail}(b)) & \text{if } \text{head}(a) = \text{head}(b), \\
-1 + \min \{ & \\
-\quad \text{lev}(\text{tail}(a), b), & \\
-\quad \text{lev}(a, \text{tail}(b)), & \\
-\quad \text{lev}(\text{tail}(a), \text{tail}(b)) & \\
-\} & \text{otherwise}
-\end{cases}
-\]
-
-where the tail of some string \(x\) is a string of all but the first character of \(x\) (i.e. \(\text{tail}(x_0x_1 \ldots x_n) = x_1x_2 \ldots x_n\)), and \(\text{head}(x)\) is the first character of \(x\) (i.e. \(\text{head}(x_0x_1 \ldots x_n) = x_0\)). Either the notation \(x[n]\) or \(x_n\) is used to refer the nth character of the string \(x\), counting from 0, thus \(\text{head}(x) = x_0 = x[0]\).
-
-The first element in the minimum corresponds to deletion (from \(a\) to \(b\)), the second to insertion and the third to replacement.
-
-This definition corresponds directly to the [naive recursive implementation](https://en.wikipedia.org/wiki/Levenshtein_distance).
 
 
 
