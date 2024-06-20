@@ -20,22 +20,22 @@ class TestBKTree(unittest.TestCase):
         print("Similar words for 'hello':", result)
         self.assertIn("hello", result)
 
-    def test_get_similar_words_within_tolerance(self):
-        # Testa a função get_similar_words para verificar se retorna palavras dentro da tolerância especificada
+    def test_get_similar_words_help(self):
+        # verifica as palavras similares a "help"
         similar = self.bktree.get_similar_words("help")
         print("Similar words for 'help':", similar)
         self.assertTrue("hell" in similar)
         self.assertTrue("help" in similar)
-        self.assertTrue("felt" in similar)  # Assume TOL >= 1
+        self.assertTrue("felt" in similar)
 
-    def test_get_similar_words_no_match(self):
-        # Garante que palavras fora da tolerância não sejam retornadas
+    def test_get_similar_words_no_match_xyz(self):
+        # verifica as palavras similares a "xyz"
         no_similar = self.bktree.get_similar_words("xyz")
         print("Similar words for 'xyz':", no_similar)
         self.assertEqual(len(no_similar), 0)
 
     def test_get_similar_words_helt(self):
-        # Testa a função get_similar_words para a palavra 'helt'
+        # verifica as palavras similares a "helt"
         similar = self.bktree.get_similar_words("helt")
         print("Similar words for 'helt':", similar)
         self.assertTrue("hell" in similar)
@@ -43,7 +43,7 @@ class TestBKTree(unittest.TestCase):
         self.assertTrue("halt" in similar)
 
     def test_get_similar_words_ops(self):
-        # Testa a função get_similar_words para a palavra 'ops'
+        # verifica as palavras similares a "ops"
         similar = self.bktree.get_similar_words("ops")
         print("Similar words for 'ops':", similar)
         self.assertTrue("oops" in similar)
