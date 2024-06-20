@@ -110,7 +110,7 @@ Verifica se a busca por palavras similares a "ops" retorna resultados corretos.
 
 ## Resultado dos Testes
 
-Os resultados são mostrados em uma lista de tuplas que corresponde à palavra similar seguida pela distância entre ela e a palavra buscada.
+Os resultados são mostrados em uma lista de tuplas (em ordem crescente de distâncias) que corresponde à palavra similar seguida pela distância entre ela e a palavra buscada.
 
 
 ### Referências
