@@ -51,7 +51,10 @@ class BKTree:
 
     def get_similar_words(self, word):
         """Retrieve words from the BKTree that are within a set tolerance distance."""
-        return self._search_similar_words(self.root, word)
+        similar_words_with_distance = self._search_similar_words(self.root, word)
+        # Sort the results by distance
+        similar_words_with_distance.sort(key=lambda x: x[1])
+        return similar_words_with_distance
 
     def _search_similar_words(self, root, s):
         """Recursive function to search similar words in the tree."""
@@ -60,7 +63,7 @@ class BKTree:
         ret = []
         dist = self.edit_distance(root.word, s)
         if dist <= self.TOL:
-            ret.append(root.word)
+            ret.append((root.word, dist))
 
         start = max(dist - self.TOL, 1)
         while start <= dist + self.TOL and start < 20:
@@ -68,5 +71,3 @@ class BKTree:
                 ret += self._search_similar_words(root.next[start], s)
             start += 1
         return ret
-
-# The module can also contain unit tests or be a part of larger package with additional functionality.

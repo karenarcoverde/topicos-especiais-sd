@@ -18,15 +18,19 @@ class TestBKTree(unittest.TestCase):
         self.bktree.add_word("hello")
         result = self.bktree.get_similar_words("hello")
         print("Similar words for 'hello':", result)
-        self.assertIn("hello", result)
+        # Extrair apenas as palavras das tuplas para a verificação
+        result_words = [word for word, dist in result]
+        self.assertIn("hello", result_words)
 
     def test_get_similar_words_help(self):
         # verifica as palavras similares a "help"
         similar = self.bktree.get_similar_words("help")
         print("Similar words for 'help':", similar)
-        self.assertTrue("hell" in similar)
-        self.assertTrue("help" in similar)
-        self.assertTrue("felt" in similar)
+        # Extrair apenas as palavras das tuplas para a verificação
+        similar_words = [word for word, dist in similar]
+        self.assertTrue("hell" in similar_words)
+        self.assertTrue("help" in similar_words)
+        self.assertTrue("felt" in similar_words)
 
     def test_get_similar_words_no_match_xyz(self):
         # verifica as palavras similares a "xyz"
@@ -38,16 +42,20 @@ class TestBKTree(unittest.TestCase):
         # verifica as palavras similares a "helt"
         similar = self.bktree.get_similar_words("helt")
         print("Similar words for 'helt':", similar)
-        self.assertTrue("hell" in similar)
-        self.assertTrue("felt" in similar)
-        self.assertTrue("halt" in similar)
+        # Extrair apenas as palavras das tuplas para a verificação
+        similar_words = [word for word, dist in similar]
+        self.assertTrue("hell" in similar_words)
+        self.assertTrue("felt" in similar_words)
+        self.assertTrue("halt" in similar_words)
 
     def test_get_similar_words_ops(self):
         # verifica as palavras similares a "ops"
         similar = self.bktree.get_similar_words("ops")
         print("Similar words for 'ops':", similar)
-        self.assertTrue("oops" in similar)
-        self.assertTrue("pop" in similar)
+        # Extrair apenas as palavras das tuplas para a verificação
+        similar_words = [word for word, dist in similar]
+        self.assertTrue("oops" in similar_words)
+        self.assertTrue("pop" in similar_words)
 
 if __name__ == '__main__':
     unittest.main()
