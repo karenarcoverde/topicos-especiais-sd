@@ -66,3 +66,4 @@ https://pypi.org/project/bk-tree-modification/
 http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees \
 https://www.youtube.com/watch?v=oIsPB2pqq_8 \
 https://medium.com/datenworks/fuzzy-search-buscando-texto-por-aproxima%C3%A7%C3%A3o-6c7214e0ea01
+https://en.wikipedia.org/wiki/Levenshtein_distance#:~:text=Informally%2C%20the%20Levenshtein%20distance%20between,considered%20this%20distance%20in%201965.
