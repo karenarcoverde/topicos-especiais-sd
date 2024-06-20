@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 
 setup(
     name='bk_tree_modification',
-    version='0.1.1',
+    version='0.1.2',
     packages=find_packages(),
     description='A simple BK-Tree implementation for finding similar words',
     long_description=open('README.md').read(),
