@@ -10,7 +10,7 @@ A **distância de Levenshtein** é a parte principal desse projeto, pois todos o
 A distância de Levenshtein entre duas strings `a`, `b` (de comprimentos |a| e |b| respectivamente) é dada por `lev(a, b)` onde:
 
 ```plaintext
-lev(a, b) = |a|                      se |b| = 0,
+lev(a, b) =   |a|                      se |b| = 0,
               |b|                      se |a| = 0,
               lev(tail(a), tail(b))    se head(a) = head(b),
               1 + min( lev(tail(a), b),
