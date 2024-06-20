@@ -7,6 +7,20 @@ Foi feito um estudo dos possíveis algoritmos que poderiam ser implementados par
 
 A **distância de Levenshtein** é a parte principal desse projeto, pois todos os algoritmos usados derivam-se dele. É possível perceber que ela foi utilizada em quase todos os algoritmos pesquisados. Ela mede o número mínimo de edições necessárias para transformar uma string em outra. Estas edições incluem inserções, deleções e substituições de caracteres.
 
+A fórmula da distância de Levenshtein entre duas strings `a`, `b` (de comprimentos |a| e |b| respectivamente) é dada por `lev(a, b)` onde:
+
+```plaintext
+lev(a, b) =   |a|                      se |b| = 0,
+              |b|                      se |a| = 0,
+              lev(tail(a), tail(b))    se head(a) = head(b),
+              1 + min( lev(tail(a), b),
+                       lev(a, tail(b)),
+                       lev(tail(a), tail(b)) )  caso contrário.
+
+```
+O head de uma string x é seu primeiro caractere, enquanto o tail é o restante da string após o primeiro caractere. O primeiro elemento no "min" corresponde a deleção (de a para b), o segundo a inserção e o terceiro a substituição.
+
+
 ### BK-Tree
 
 A BK-Tree consiste em botar as palavras em uma árvore com pesos (distância de Levenshtein) e pecorrer a árvore pegando todas as distâncias menores ou iguais a distância limite estipulada. 
@@ -35,7 +49,27 @@ Similaridade = (1 - (Distância de Levenshtein / Comprimento máximo das duas st
 ```
 Esta fórmula fornece um valor percentual que reflete quão semelhantes são as duas strings baseado na distância de Levenshtein, onde 100% representa uma correspondência perfeita e 0% indica nenhuma similaridade.
 
+
+
+### Instalação
+Para instalar o módulo `bk-tree-modification` (https://pypi.org/project/bk-tree-modification/), execute o seguinte comando no terminal do Windows:
+
+```bash
+pip install bk-tree-modification
+```
+
+Após a instalação, você pode importar o BKTree do módulo usando:
+```bash
+from bk_tree import BKTree
+```
+
+### Exemplo 
+
+(ordenacao do resultado, distancia e ordenacao) 
+
+
 ### Referências
 http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees \
 https://www.youtube.com/watch?v=oIsPB2pqq_8 \
 https://medium.com/datenworks/fuzzy-search-buscando-texto-por-aproxima%C3%A7%C3%A3o-6c7214e0ea01
+https://en.wikipedia.org/wiki/Levenshtein_distance#:~:text=Informally%2C%20the%20Levenshtein%20distance%20between,considered%20this%20distance%20in%201965.
