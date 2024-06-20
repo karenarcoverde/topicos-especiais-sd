@@ -29,6 +29,8 @@ The first element in the minimum corresponds to deletion (from \(a\) to \(b\)), 
 
 This definition corresponds directly to the [naive recursive implementation](https://en.wikipedia.org/wiki/Levenshtein_distance).
 
+
+
 ### BK-Tree
 
 A BK-Tree consiste em botar as palavras em uma árvore com pesos (distância de Levenshtein) e pecorrer a árvore pegando todas as distâncias menores ou iguais a distância limite estipulada. 
