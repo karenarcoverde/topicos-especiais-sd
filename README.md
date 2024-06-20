@@ -52,18 +52,21 @@ Esta fórmula fornece um valor percentual que reflete quão semelhantes são as 
 
 
 ### Instalação
-Para instalar o módulo `bk-tree-modification`, execute o seguinte comando no terminal do Windows:
+Para instalar o módulo `bk-tree-modification` (https://pypi.org/project/bk-tree-modification/), execute o seguinte comando no terminal do Windows:
 
 ```bash
 pip install bk-tree-modification
+```
+
+Após a instalação, você pode importar o BKTree do módulo usando:
+```bash
+from bk_tree import BKTree
 ```
 
 ### Exemplo 
 
 (ordenacao do resultado, distancia e ordenacao) 
 
-### Biblioteca no PyPI
-https://pypi.org/project/bk-tree-modification/
 
 ### Referências
 http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees \
