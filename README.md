@@ -8,12 +8,14 @@ Foi feito um estudo dos possíveis algoritmos que poderiam ser implementados par
 A **distância de Levenshtein** é a parte principal desse projeto, pois todos os algoritmos usados derivam-se dele. É possível perceber que ela foi utilizada em quase todos os algoritmos pesquisados. Ela mede o número mínimo de edições necessárias para transformar uma string em outra. Estas edições incluem inserções, deleções e substituições de caracteres.
 
 A distância de Levenshtein entre duas strings `a`, `b` (de comprimentos |a| e |b| respectivamente) é dada por `lev(a, b)` onde:
-lev(a, b) = |a| se |b| = 0,
-|b| se |a| = 0,
-lev(tail(a), tail(b)) se head(a) = head(b),
-1 + min( lev(tail(a), b),
-lev(a, tail(b)),
-lev(tail(a), tail(b)) ) caso contrário.
+
+```plaintext
+lev(a, b) = { |a|                      se |b| = 0,
+              |b|                      se |a| = 0,
+              lev(tail(a), tail(b))    se head(a) = head(b),
+              1 + min( lev(tail(a), b),
+                       lev(a, tail(b)),
+                       lev(tail(a), tail(b)) )  caso contrário.
 
 
 onde `tail` de alguma string `x` é uma string de todos os caracteres exceto o primeiro de `x` (i.e. `tail(x₀x₁...xₙ) = x₁x₂...xₙ`), e `head(x)` é o primeiro caractere de `x` (i.e. `head(x₀x₁...xₙ) = x₀`). A notação `x[n]` ou `xₙ` é usada para referir ao n-ésimo caractere da string `x`, começando de 0, assim `head(x) = x₀ = x[0]`.
