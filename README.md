@@ -10,7 +10,7 @@ A **distância de Levenshtein** é a parte principal desse projeto, pois todos o
 
 A distância de Levenshtein entre duas strings \(a, b\) (de comprimento \(|a|\) e \(|b|\), respectivamente) é dada por \(\text{lev}(a, b)\), onde:
 
-\[
+\[ 
 \text{lev}(a, b) =
 \begin{cases} 
 |a| & \text{se } |b| = 0, \\
@@ -29,7 +29,6 @@ onde \(\text{tail}\) de uma string \(x\) é uma string com todos os caracteres d
 O primeiro elemento no mínimo corresponde à deleção (de \(a\) para \(b\)), o segundo à inserção e o terceiro à substituição.
 
 Esta definição corresponde diretamente à implementação recursiva ingênua.
-
 
 
 
