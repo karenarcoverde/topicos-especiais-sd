@@ -85,10 +85,6 @@ Ran 6 tests in 0.004s
 OK
 ```
 
-
-(ordenacao do resultado, distancia e ordenacao) 
-
-
 ### Referências
 http://blog.notdot.net/2007/4/Damn-Cool-Algorithms-Part-1-BK-Trees \
 https://www.youtube.com/watch?v=oIsPB2pqq_8 \
