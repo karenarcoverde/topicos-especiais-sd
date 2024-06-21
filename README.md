@@ -88,6 +88,7 @@ Ran 6 tests in 0.004s
 OK
 ```
 Palavras usadas na bk tree:
+
 Essas palavras estão no arquivo test_bktree.py da pasta tests na função setUp.
 ```bash
 ["hell", "help", "shell", "smell", "fell", "felt", "oops", "pop", "oouch", "halt"]
