@@ -87,6 +87,10 @@ Ran 6 tests in 0.004s
 
 OK
 ```
+Palavras usadas na bk tree:
+```bash
+["hell", "help", "shell", "smell", "fell", "felt", "oops", "pop", "oouch", "halt"]
+```
 
 ## Explicação do código de teste
 
